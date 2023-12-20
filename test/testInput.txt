@@ -1,0 +1,21 @@
+#aload koala.ppm and call it 'koala'
+load files/sample_images/manhattan-small.png koala
+
+#brighten koala by adding 10
+brighten 10 koala koala-brighter
+
+#flip koala vertically
+vertical-flip koala koala-vertical
+
+#flip the vertically flipped koala horizontally
+horizontal-flip koala-vertical koala-vertical-horizontal
+
+#create a greyscale using only the value component, as an image koala-greyscale
+value-component koala koala-greyscale
+
+#save koala-brighter
+save images/koala-brighter.png koala-vertical-horizontal
+
+save image/koala#1.png koala-greyscale
+
+exit

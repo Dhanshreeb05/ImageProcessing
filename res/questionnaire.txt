@@ -1,0 +1,79 @@
+Code status questionnaire:
+
+Please complete this questionnaire by selecting the appropriate answer for each question. Then include this file in the code that you send to your customers.
+
+Import/export features:
+
+Load a PPM file implementation: Y
+Script command to load a PPM file: Y - load image-path image-name (image-path should point to ppm image)
+Load PPM file from GUI: Y
+
+Load a PNG/JPG file implementation: Y
+Script command to load a PNG/JPG file: Y - load image-path image-name (image-path should point to jpg/png image)
+Load PNG/JPG file from GUI: Y
+
+Save a PPM file implementation: Y
+Script command to save a PPM file: Y - save image-path image-name (save with ppm extension)
+Save PPM file from GUI: Y
+
+Save a PNG/JPG file implementation: Y
+Script command to save a PNG/JPG file: Y - save image-path image-name (save with ppm extension)
+Save PNG/JPG file from GUI: Y
+
+
+Image manipulations:
+
+Visualize various image components implementation: Y
+Script commands to load various image components: Y - red-component image-name dest-image-name   (replace red with green or blue to get respective component)
+Visualize various image components from GUI: Y
+
+Flip an image horizontally implementation: Y
+Script command to flip an image horizontally: Y - horizontal-flip image-name dest-image-name
+Flip an image horizontally from GUI: Y
+
+Flip an image vertically implementation: Y
+Script command to flip an image vertically: Y - vertical-flip image-name dest-image-name
+Flip an image vertically from GUI: Y
+
+Brighten/darken image implementation: Y
+Script command to bright/darken image: Y - brighten increment image-name dest-image-name (negative increment to darken and positive increment to brighten)
+Brighten/darken image from GUI: Y
+
+Blur an image implementation: Y
+Script command to blur an image: Y - blur image-name dest-image-name
+Blur an image from GUI: Y
+
+Sharpen an image implementation: Y
+Script command to sharpen an image: Y - sharpen image-name dest-image-name
+Sharpen an image from GUI: Y
+
+Sepia implementation: Y
+Script command for sepia: Y - sepia image-name dest-image-name
+Sepia from GUI: Y
+
+Compression implementation: Y
+Script command for Compression: Y - compress percentage image-name dest-image-name
+Compression from GUI: Y
+
+Histogram visualization from GUI: Y
+
+Levels-adjust implementation: Y
+Script command for levels adjustment: Y - levels-adjust b m w image-name dest-image-name
+Levels-adjust from GUI: Y
+
+Color correction implementation: Y
+Script command for Color correction: Y - color-correct image-name dest-image-name
+Color correction from GUI: Y
+
+Split preview implementation: Y
+Split preview in GUI: Y
+
+
+
+
+Program:
+
+Program runs by running main? Y
+Program runs correctly using -file option? Y
+Program runs correctly using -text option? Y
+Program runs correctly (opens GUI) with no command-line options? Y

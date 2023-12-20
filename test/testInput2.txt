@@ -1,0 +1,42 @@
+#load manhattan.-small.png and call it 'manhattan'
+load files/sample_images/manhattan-small.png manhattan
+
+#brighten manhattan by adding 10
+brighten 10 manhattan manhattan-brighter
+
+#flip manhattan vertically
+vertical-flip manhattan manhattan-vertical
+
+#flip the vertically flipped manhattan horizontally
+horizontal-flip manhattan-vertical manhattan-vertical-horizontal
+
+#create a greyscale using only the value component, as an image manhattan-greyscale
+value-component manhattan manhattan-greyscale
+
+#save manhattan-brighter
+save outputImages/manhattan-brighter.png manhattan-brighter
+
+#save manhattan-vertical
+save outputImages/manhattan-brighter-vertical.png manhattan-vertical
+
+#save manhattan-greyscale
+save outputImages/manhattan-gs.png manhattan-greyscale
+
+#overwrite manhattan with another file
+load files/sample_images/tree.jpeg manhattan
+
+#give the manhattan a red tint
+rgb-split manhattan manhattan-red manhattan-green manhattan-blue
+save outputImages/manhattan-red.png manhattan-red
+save outputImages/manhattan-green.png manhattan-green
+save outputImages/manhattan-blue.png manhattan-blue
+
+#brighten just the red image
+brighten 50 manhattan-red manhattan-red
+save outputImages/manhattan-red-brighter.png manhattan-red
+
+#combine them back, but by using the brightened red we get a red tint
+rgb-combine manhattan-red-tint manhattan-red manhattan-green manhattan-blue
+save outputImages/manhattan-red-tint.png manhattan-red-tint
+
+exit

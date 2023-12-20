@@ -1,0 +1,100 @@
+# Support for using the program graphical user interface.
+
+1.  The program will start with just a LOAD button. Clicking on it will prompt you to select an
+    image from the system of the formats jpg, png or ppm.
+
+2.  The image will be displayed on the left side of the window and the histogram will be
+    displayed on the right side of the window. The save button and the Split view toggle switch
+    will be visible on the top, beside the load button.
+
+3.  You can load a new image any time. Doing so would remove the current image.
+
+4.  At the bottom you can choose an action to perform on the image from the dropdown and
+    press the Execute button. The actions that you can perform on the current image might change
+    depending on the type of image.
+    (For example. You cannot get Green Component from the red component of an image)
+
+5.  Everytime an action to image is performed and the current image is updated, the histogram
+    is also updated to the histogram of the current image.
+
+6.  Some actions like compress, level Adjust, etc. require additional parameters from the user. A
+    popup box will be displayed to get those user parameters. If the user passes invalid
+    parameters the program will prompt the user to enter them again.
+
+7.  The application allows Split View Preview to be toggled ON and OFF. When split view is turned
+    ON, only few actions are available in the dropbox. Turning ON the split view makes a slider
+    visible below the image. This controls the split percentage. The user can slide it to see the
+    effect of the action on the image in realtime.
+    ACTIONS PERFORMED ON THE IMAGE WHILE SPLIT VIEW IS ON ARE ONLY TEMPORARY!
+
+8.  The save button allows the image to be saved on the disk as a ppm, png or jpg image.
+    Any other format is not supported.
+    If the user tries to exit the application before saving the current image, a warning prompt is
+    shown by the application asking for Exit confirmation.
+
+
+--------------------------------------------------------------------------------------------------
+
+# Support for executing script file:-
+
+* Run the program : "java -jar Program.jar -file path-of-script-file"
+
+--------------------------------------------------------------------------------------------------
+# Supported Commands for interactive text mode:-
+
+* Run the program as "java -jar Program.jar -text"
+
+-Load an image
+load image-path image-name - should be the first command in the script
+
+-save an image
+save image-path image-name
+
+-Get red component of an image
+red-component image-name dest-image-name
+
+-horizontal flip an image
+horizontal-flip image-name dest-image-name
+
+-vertical flip an image
+vertical-flip image-name dest-image-name
+
+-brighten an image
+brighten increment image-name dest-image-name
+
+-Split an image into components
+rgb-split image-name dest-image-name-red dest-image-name-green dest-image-name-blue
+
+-combine channels of the image
+rgb-combine image-name red-image green-image blue-image
+
+-blur an image
+blur image-name dest-image-name
+
+-sharpen an image
+sharpen image-name dest-image-name
+
+-get sepia of the image
+sepia image-name dest-image-name
+
+-run the scrip of commands
+run script-file
+
+-Compress the image
+compress percentage image-name dest-image-name
+
+-get histogram of an image
+histogram image-name dest-image-name
+
+-level adjust the image
+levels-adjust b m w image-name dest-image-name
+
+-Split view the image
+............ split p
+
+* NOTE: The split command only works with blur, sharpen, sepia, greyscale, color correction
+* and levels adjustment. Everywhere else, it is ignored.
+
+
+
+
